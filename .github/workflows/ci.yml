@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Start the server
-        run: npm start
+        run: npm start &
 
       - name: Wait for the server to start
         run: sleep 5
