@@ -6,6 +6,7 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "lint": "next lint",
+    "test": "cypress run",
     "test:e2e": "cypress open",
     "dev": "next dev",
     "build": "next build",
