@@ -1,13 +1,21 @@
+import clsx from "clsx";
+
 type TileProps = {
-  variant: "white" | "black";
+  tileColor: "white" | "black";
+  pieceColor?: "white" | "black";
 };
 
-export default function Tile({ variant }: TileProps) {
+export default function Tile({ tileColor, pieceColor }: TileProps) {
   return (
     <div
-      className={`aspect-square ${
-        variant === "white" ? "bg-board-white" : "bg-board-black"
-      }`}
+      className={clsx(
+        "aspect-square",
+        { "bg-board-white": tileColor === "white" },
+        { "bg-board-black": tileColor === "black" },
+        { "bg-[url('/images/white-pawn.png')]": pieceColor === "white" },
+        { "bg-[url('/images/black-pawn.png')]": pieceColor === "black" },
+        "bg-cover",
+      )}
     ></div>
   );
 }
