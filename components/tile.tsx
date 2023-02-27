@@ -15,12 +15,11 @@ export default function Tile({ color, pieceColor, number, letter }: TileProps) {
   return (
     <div
       className={clsx(
-        "relative aspect-square",
+        "relative aspect-square bg-cover",
         { "bg-board-white": color === "white" },
         { "bg-board-black": color === "black" },
         { "bg-[url('/images/white-pawn.png')]": pieceColor === "white" },
         { "bg-[url('/images/black-pawn.png')]": pieceColor === "black" },
-        "bg-cover",
       )}
     >
       {!!number && (

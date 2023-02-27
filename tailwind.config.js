@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
@@ -11,6 +13,9 @@ module.exports = {
           white: "#eeeed2",
           black: "#769656",
         },
+      },
+      fontFamily: {
+        heading: ["var(--font-montserrat)", ...fontFamily.sans],
       },
     },
   },
