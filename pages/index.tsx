@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Board from "@/components/board";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
         <meta name="description" content="A simple chess game" />
         <title>Pawn Game</title>
       </Head>
-      <main>
-        <h1 className="text-3xl font-bold">Hello World</h1>
+      <main className="m-auto w-full max-w-[800px]">
+        <Board />
       </main>
     </>
   );
