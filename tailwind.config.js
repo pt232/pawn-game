@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         brown: {
           900: "#312e2b",
+          500: "#c5c4c3",
         },
         board: {
           white: "#eeeed2",

@@ -24,7 +24,7 @@ export default function Tile({ color, pieceColor, number, letter }: TileProps) {
     >
       {!!number && (
         <span
-          className={`absolute top-[2px] left-[4px] text-xs font-semibold sm:top-1 sm:left-2 sm:text-xl md:font-bold ${
+          className={`absolute top-[2px] left-[4px] select-none text-xs font-semibold sm:top-1 sm:left-2 sm:text-xl md:font-bold ${
             color === "white" ? "text-board-black" : "text-board-white"
           }`}
         >
@@ -33,7 +33,7 @@ export default function Tile({ color, pieceColor, number, letter }: TileProps) {
       )}
       {!!letter && (
         <span
-          className={`absolute bottom-[2px] right-[4px] text-xs font-semibold sm:bottom-1 sm:right-2 sm:text-xl md:font-bold ${
+          className={`absolute bottom-[2px] right-[4px] select-none text-xs font-semibold sm:bottom-1 sm:right-2 sm:text-xl md:font-bold ${
             color === "white" ? "text-board-black" : "text-board-white"
           }`}
         >

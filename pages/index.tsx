@@ -16,11 +16,16 @@ export default function Home() {
         <title>Pawn Game</title>
       </Head>
       <main className="m-auto w-full max-w-[800px] p-3">
-        <h1
-          className={`${montserrat.variable} mb-4 text-center font-heading text-4xl font-bold sm:text-5xl`}
-        >
-          Pawn Game
-        </h1>
+        <header className="mb-4 text-center">
+          <h1
+            className={`${montserrat.variable} mb-1 font-heading text-4xl font-bold sm:text-5xl`}
+          >
+            Welcome to the Pawn Game!
+          </h1>
+          <p className="text-lg text-brown-500 sm:text-xl">
+            Take on your opponent in a strategic game of pawns-only chess
+          </p>
+        </header>
         <Board />
       </main>
     </>
