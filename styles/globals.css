@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-brown-900 text-white;
+@layer base {
+  body {
+    @apply bg-secondary-900 text-white;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
 }

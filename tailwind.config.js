@@ -6,7 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brown: {
+        primary: {
+          700: "#537133",
+          600: "#77994c",
+          500: "#7fa650",
+          400: "#95bb4a",
+        },
+        secondary: {
           900: "#312e2b",
           500: "#c5c4c3",
         },
@@ -16,7 +22,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-montserrat)", ...fontFamily.sans],
+        primary: ["var(--font-montserrat)", ...fontFamily.sans],
+      },
+      boxShadow: {
+        button: "0 4px 0 0 #537133",
       },
     },
   },
