@@ -9,9 +9,16 @@ type TileProps = {
   pieceColor?: "white" | "black";
   number?: TileNumber;
   letter?: TileLetter;
+  finishPosition?: "top" | "bottom";
 };
 
-export default function Tile({ color, pieceColor, number, letter }: TileProps) {
+export default function Tile({
+  color,
+  pieceColor,
+  number,
+  letter,
+  finishPosition,
+}: TileProps) {
   return (
     <div
       className={clsx(
@@ -20,6 +27,11 @@ export default function Tile({ color, pieceColor, number, letter }: TileProps) {
         { "bg-board-black": color === "black" },
         { "bg-[url('/images/white-pawn.png')]": pieceColor === "white" },
         { "bg-[url('/images/black-pawn.png')]": pieceColor === "black" },
+        { "shadow-tile-top sm:shadow-tile-top-sm": finishPosition === "top" },
+        {
+          "shadow-tile-bottom sm:shadow-tile-bottom-sm":
+            finishPosition === "bottom",
+        },
       )}
     >
       {!!number && (

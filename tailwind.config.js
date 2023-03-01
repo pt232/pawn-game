@@ -26,6 +26,10 @@ module.exports = {
       },
       boxShadow: {
         button: "0 4px 0 0 #537133",
+        "tile-top": "inset 0 -2px 0 0 #eb6150",
+        "tile-top-sm": "inset 0 -4px 0 0 #eb6150",
+        "tile-bottom": "inset 0 2px 0 0 #eb6150",
+        "tile-bottom-sm": "inset 0 4px 0 0 #eb6150",
       },
     },
   },

@@ -3,14 +3,14 @@ import Tile from "./tile";
 export default function Board() {
   return (
     <div className="grid grid-cols-8 overflow-hidden rounded-[4px] bg-red-50">
-      <Tile color="white" number="8" />
-      <Tile color="black" />
-      <Tile color="white" />
-      <Tile color="black" />
-      <Tile color="white" />
-      <Tile color="black" />
-      <Tile color="white" />
-      <Tile color="black" />
+      <Tile color="white" number="8" finishPosition="top" />
+      <Tile color="black" finishPosition="top" />
+      <Tile color="white" finishPosition="top" />
+      <Tile color="black" finishPosition="top" />
+      <Tile color="white" finishPosition="top" />
+      <Tile color="black" finishPosition="top" />
+      <Tile color="white" finishPosition="top" />
+      <Tile color="black" finishPosition="top" />
 
       <Tile color="black" pieceColor="black" number="7" />
       <Tile color="white" pieceColor="black" />
@@ -66,14 +66,14 @@ export default function Board() {
       <Tile color="white" pieceColor="white" />
       <Tile color="black" pieceColor="white" />
 
-      <Tile color="black" number="1" letter="a" />
-      <Tile color="white" letter="b" />
-      <Tile color="black" letter="c" />
-      <Tile color="white" letter="d" />
-      <Tile color="black" letter="e" />
-      <Tile color="white" letter="f" />
-      <Tile color="black" letter="g" />
-      <Tile color="white" letter="h" />
+      <Tile color="black" number="1" letter="a" finishPosition="bottom" />
+      <Tile color="white" letter="b" finishPosition="bottom" />
+      <Tile color="black" letter="c" finishPosition="bottom" />
+      <Tile color="white" letter="d" finishPosition="bottom" />
+      <Tile color="black" letter="e" finishPosition="bottom" />
+      <Tile color="white" letter="f" finishPosition="bottom" />
+      <Tile color="black" letter="g" finishPosition="bottom" />
+      <Tile color="white" letter="h" finishPosition="bottom" />
     </div>
   );
 }
