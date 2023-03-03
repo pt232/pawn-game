@@ -1,13 +1,7 @@
-import { Montserrat } from "next/font/google";
 import { cva, VariantProps } from "class-variance-authority";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
-
 const buttonVariants = cva(
-  `${montserrat.variable} font-primary font-bold rounded-md transition-colors text-shadow`,
+  `font-primary font-bold rounded-md transition-colors text-shadow`,
   {
     variants: {
       intent: {
