@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        primary: ["var(--font-montserrat)", ...fontFamily.sans],
+        primary: ["Montserrat", ...fontFamily.sans],
       },
       boxShadow: {
         button: "0 4px 0 0 #537133",
