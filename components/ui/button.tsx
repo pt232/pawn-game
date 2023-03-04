@@ -4,7 +4,7 @@ const buttonVariants = cva(
   `font-primary font-bold rounded-md transition-colors text-shadow`,
   {
     variants: {
-      intent: {
+      variant: {
         default:
           "bg-primary-500 text-white hover:bg-primary-400 active:bg-primary-600 shadow-button",
       },
@@ -13,7 +13,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      intent: "default",
+      variant: "default",
       size: "default",
     },
   },
@@ -25,12 +25,12 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
 export default function Button({
   children,
   className,
-  intent,
+  variant,
   size,
   ...props
 }: ButtonProps) {
   return (
-    <button className={buttonVariants({ intent, size, className })} {...props}>
+    <button className={buttonVariants({ variant, size, className })} {...props}>
       {children}
     </button>
   );

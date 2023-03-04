@@ -10,7 +10,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  intent: "default",
+  variant: "default",
   size: "default",
   children: "Button",
 };
