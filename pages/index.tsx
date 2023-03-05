@@ -14,7 +14,7 @@ export default function Home() {
           <h1 className="mb-1 font-primary text-4xl font-bold sm:text-5xl">
             Welcome to the Pawn Game!
           </h1>
-          <p className="text-lg text-secondary-400 sm:text-xl">
+          <p className="text-lg text-secondary-300 sm:text-xl">
             Take on your opponent in a strategic game of pawns-only chess
           </p>
         </header>
