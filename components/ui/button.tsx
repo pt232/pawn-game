@@ -8,7 +8,7 @@ const buttonVariants = cva(
         primary:
           "bg-primary-500 text-white hover:bg-primary-400 active:bg-primary-600 shadow-button-primary",
         secondary:
-          "bg-secondary-700 text-secondary-400 hover:bg-secondary-500 hover:text-white active:bg-secondary-600 active:text-white shadow-button shadow-button-secondary",
+          "bg-secondary-600 text-secondary-300 hover:bg-secondary-400 hover:text-white active:bg-secondary-500 active:text-white shadow-button shadow-button-secondary",
       },
       size: {
         sm: "text-base py-2 px-6",
