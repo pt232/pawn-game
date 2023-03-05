@@ -5,16 +5,20 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary-500 text-white hover:bg-primary-400 active:bg-primary-600 shadow-button",
+        primary:
+          "bg-primary-500 text-white hover:bg-primary-400 active:bg-primary-600 shadow-button-primary",
+        secondary:
+          "bg-secondary-700 text-secondary-400 hover:bg-secondary-500 hover:text-white active:bg-secondary-600 active:text-white shadow-button shadow-button-secondary",
       },
       size: {
-        default: "text-xl sm:text-[22px] py-3 px-8",
+        sm: "text-base py-2 px-6",
+        md: "text-xl sm:text-[22px] py-3 px-8",
+        lg: "text-2xl py-4 px-12",
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "primary",
+      size: "md",
     },
   },
 );
