@@ -9,19 +9,14 @@ export default function Home() {
         <meta name="description" content="A simple chess game" />
         <title>Pawn Game</title>
       </Head>
-      <main className="m-auto w-full max-w-[800px] p-3">
-        <header className="mb-8 text-center">
-          <h1 className="mb-1 font-primary text-4xl font-bold sm:text-5xl">
-            Welcome to the Pawn Game!
-          </h1>
-          <p className="text-lg text-secondary-300 sm:text-xl">
-            Take on your opponent in a strategic game of pawns-only chess
-          </p>
-        </header>
-
-        <Button className="mb-4 w-full">New Game</Button>
+      <main className="m-auto w-full max-w-lg p-4">
+        <h1 className="mb-4 text-center font-primary text-xl font-bold sm:text-2xl">
+          Welcome to the Pawn Game!
+        </h1>
 
         <Board />
+
+        <Button className="mt-4 w-full">New Game</Button>
       </main>
     </>
   );

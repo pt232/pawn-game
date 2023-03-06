@@ -11,9 +11,9 @@ const buttonVariants = cva(
           "bg-secondary-600 text-secondary-300 hover:bg-secondary-400 hover:text-white active:bg-secondary-500 active:text-white shadow-button shadow-button-secondary",
       },
       size: {
-        sm: "text-base py-2 px-6",
-        md: "text-xl sm:text-[22px] py-3 px-8",
-        lg: "text-2xl py-4 px-12",
+        sm: "text-sm py-2 px-4",
+        md: "text-base py-2 px-6",
+        lg: "text-xl sm:text-[22px] py-3 px-8",
       },
     },
     defaultVariants: {
