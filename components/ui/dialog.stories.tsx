@@ -11,18 +11,18 @@ export default {
   },
 } as ComponentMeta<typeof Dialog>;
 
-export const Primary: ComponentStory<typeof Dialog> = (args) => {
+const Template: ComponentStory<typeof Dialog> = (args) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open</Button>
-      <Dialog
-        {...args}
-        isOpen={isOpen}
-        hasCloseBtn
-        close={() => setIsOpen(false)}
-      />
+      <Dialog {...args} isOpen={isOpen} close={() => setIsOpen(false)} />
     </>
   );
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  title: "Title",
 };

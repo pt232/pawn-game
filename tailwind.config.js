@@ -21,6 +21,9 @@ module.exports = {
           400: "#52504d",
           300: "#c5c4c3",
         },
+        link: {
+          500: "#52b1dc",
+        },
         board: {
           white: "#eeeed2",
           black: "#769656",
