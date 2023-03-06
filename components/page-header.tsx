@@ -42,7 +42,7 @@ export default function PageHeader() {
         title="About"
         close={() => setIsAboutDialogOpen(false)}
       >
-        <p>
+        <p className="mb-3">
           The Pawn Game is a simple and fun multiplayer web app that I created
           as a personal project to practice my web development skills. Have fun
           playing!

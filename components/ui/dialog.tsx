@@ -26,19 +26,17 @@ export default function Dialog({
         open={isOpen}
         className="fixed z-20 w-10/12 max-w-md rounded-md bg-secondary-900 p-4 text-white shadow-md"
       >
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">{title}</h2>
-            <button onClick={close}>
-              <X
-                className="text-secondary-300 transition-colors hover:text-white"
-                size={18}
-                strokeWidth={3}
-              />
-            </button>
-          </div>
-          {children}
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">{title}</h2>
+          <button onClick={close}>
+            <X
+              className="text-secondary-300 transition-colors hover:text-white"
+              size={18}
+              strokeWidth={3}
+            />
+          </button>
         </div>
+        {children}
       </dialog>
     </>
   );
