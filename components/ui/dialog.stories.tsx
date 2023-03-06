@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof Dialog> = (args) => {
   );
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   title: "Title",
 };

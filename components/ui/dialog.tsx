@@ -1,10 +1,11 @@
 import { X } from "lucide-react";
 
 type DialogProps = {
+  children: React.ReactNode;
   isOpen: boolean;
   title: string;
   close: () => void;
-} & React.DialogHTMLAttributes<HTMLDialogElement>;
+};
 
 export default function Dialog({
   children,
