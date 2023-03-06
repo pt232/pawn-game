@@ -3,6 +3,7 @@ import PageHeader from "@/components/page-header";
 import Board from "@/components/board";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
+import AccordionItem from "@/components/ui/accordion-item";
 
 export default function Home() {
   return (
@@ -59,6 +60,27 @@ export default function Home() {
                 tempora assumenda distinctio natus facilis laborum iste
                 voluptates quas voluptas? Autem doloribus praesentium ea.
               </p>
+
+              <h2 className="mt-4 font-primary text-xl font-bold">
+                Frequently asked questions
+              </h2>
+              <AccordionItem title="Lorem ipsum dolor?">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                totam ex accusamus minus id sed eligendi quos architecto!
+                Expedita, incidunt.
+              </AccordionItem>
+              <AccordionItem title="Animi vel quam nostrum nesciunt?">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita corporis quibusdam quae, id obcaecati hic laudantium
+                impedit! Animi vel quam nostrum nesciunt dignissimos similique
+                iste aliquam reprehenderit laborum voluptas omnis nobis facilis
+                voluptate eveniet, accusamus quod nihil recusandae.
+              </AccordionItem>
+              <AccordionItem title="Ab totam ex accusamus minus?">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                totam ex accusamus minus id sed eligendi quos architecto!
+                Expedita, incidunt.
+              </AccordionItem>
             </Card>
           </section>
         </main>
