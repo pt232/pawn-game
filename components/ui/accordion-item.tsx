@@ -1,4 +1,4 @@
-import { ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 type AccordionItemProps = {
@@ -16,10 +16,10 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <h3 className="group-hover:underline">{title}</h3>
-        <ChevronUp
+        <ChevronDown
           size={18}
           className={`${
-            isOpen ? "-rotate-180" : "rotate-0"
+            isOpen ? "rotate-180" : "rotate-0"
           } transition-transform duration-300`}
         />
       </button>
