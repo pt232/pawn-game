@@ -31,7 +31,7 @@ export default function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="A simple chess game" />
-        <title>Pawn Game</title>
+        <title>Pawn Game - A pawns-only chess variant</title>
       </Head>
 
       <div className="m-auto w-full max-w-lg px-4">
