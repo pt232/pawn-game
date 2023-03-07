@@ -27,7 +27,7 @@ export default function Dialog({
         className="fixed top-32 z-20 w-10/12 max-w-md rounded-md bg-secondary-900 p-4 text-white shadow-md"
       >
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">{title}</h2>
+          <h2 className="text-lg font-medium">{title}</h2>
           <button onClick={close} aria-label="Close Dialog">
             <X
               className="text-secondary-300 transition-colors hover:text-white"

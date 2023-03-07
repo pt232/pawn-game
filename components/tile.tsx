@@ -36,7 +36,7 @@ export default function Tile({
     >
       {!!number && (
         <span
-          className={`absolute top-[2px] left-[4px] select-none text-xs font-semibold sm:top-1 sm:left-2 sm:text-base md:font-bold ${
+          className={`absolute top-[2px] left-[4px] select-none text-xs font-medium sm:top-1 sm:left-2 sm:text-base md:font-bold ${
             color === "white" ? "text-board-black" : "text-board-white"
           }`}
         >
@@ -45,7 +45,7 @@ export default function Tile({
       )}
       {!!letter && (
         <span
-          className={`absolute bottom-[2px] right-[4px] select-none text-xs font-semibold sm:bottom-1 sm:right-2 sm:text-base md:font-bold ${
+          className={`absolute bottom-[2px] right-[4px] select-none text-xs font-medium sm:bottom-1 sm:right-2 sm:text-base md:font-bold ${
             color === "white" ? "text-board-black" : "text-board-white"
           }`}
         >

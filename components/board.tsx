@@ -1,14 +1,16 @@
 import Clock from "./clock";
+import PlayerInfo from "./player-info";
 import Tile from "./tile";
 
 export default function Board() {
   return (
     <>
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <PlayerInfo name="Opponent" />
         <Clock color="black" />
       </div>
 
-      <div className="my-2 grid grid-cols-8 overflow-hidden rounded-[4px] bg-red-50">
+      <div className="my-3 grid grid-cols-8 overflow-hidden rounded-[4px] bg-red-50">
         <Tile color="white" number="8" finishPosition="top" />
         <Tile color="black" finishPosition="top" />
         <Tile color="white" finishPosition="top" />
@@ -82,7 +84,8 @@ export default function Board() {
         <Tile color="white" letter="h" finishPosition="bottom" />
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <PlayerInfo name="You" />
         <Clock color="white" />
       </div>
     </>
