@@ -24,11 +24,11 @@ export default function Dialog({
       )}
       <dialog
         open={isOpen}
-        className="fixed z-20 w-10/12 max-w-md rounded-md bg-secondary-900 p-4 text-white shadow-md"
+        className="fixed top-32 z-20 w-10/12 max-w-md rounded-md bg-secondary-900 p-4 text-white shadow-md"
       >
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold">{title}</h2>
-          <button onClick={close}>
+          <button onClick={close} aria-label="Close Dialog">
             <X
               className="text-secondary-300 transition-colors hover:text-white"
               size={18}
