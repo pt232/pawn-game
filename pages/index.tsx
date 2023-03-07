@@ -38,9 +38,12 @@ export default function Home() {
         <PageHeader />
 
         <main>
-          <h1 className="mb-4 text-center font-primary text-xl font-bold sm:text-2xl">
+          <h1 className="text-center font-primary text-xl font-bold sm:text-2xl">
             Welcome to the Pawn Game!
           </h1>
+          <p className="mb-4 text-center text-secondary-300 sm:mb-6 sm:text-lg">
+            A pawns-only chess variant
+          </p>
 
           <Board />
 
