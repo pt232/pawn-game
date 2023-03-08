@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
-import AboutDialog from "./dialog/AboutDialog";
+import AboutDialog from "./dialog/about-dialog";
 
 export default function PageHeader() {
   const [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);

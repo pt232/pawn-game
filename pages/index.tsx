@@ -1,30 +1,14 @@
 import Head from "next/head";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import PageHeader from "@/components/page-header";
 import Board from "@/components/game/board";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import AccordionItem from "@/components/ui/accordion-item";
-import Dialog from "@/components/ui/dialog";
-import Input from "@/components/ui/input/input";
+import StartDialog from "@/components/dialog/start-dialog";
 
 export default function Home() {
   const [isGameDialogOpen, setIsGameDialogOpen] = useState(false);
-  const nameRef = useRef<HTMLInputElement | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  function startGame(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    setError(null);
-
-    if (nameRef.current?.value.trim() === "") {
-      setError("Please enter a name");
-      return;
-    }
-
-    setIsGameDialogOpen(false);
-  }
 
   return (
     <>
@@ -54,28 +38,10 @@ export default function Home() {
             New Game
           </Button>
 
-          <Dialog
+          <StartDialog
             isOpen={isGameDialogOpen}
-            title="Let's play the Pawn Game"
             close={() => setIsGameDialogOpen(false)}
-          >
-            <p className="mb-4">
-              To get started, enter your player name. Once the game is created,
-              others can join via a link.
-            </p>
-            <form onSubmit={startGame}>
-              <Input
-                ref={nameRef}
-                id="player-name"
-                placeholder="Your name"
-                aria-label="Your name"
-              />
-              {error && <p className="my-1 text-sm text-red-400">{error}</p>}
-              <Button size="sm" type="submit" className="mt-2 w-full">
-                Start the Game
-              </Button>
-            </form>
-          </Dialog>
+          />
 
           <section className="mt-8 mb-4">
             <Card>
