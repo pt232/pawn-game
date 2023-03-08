@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -18,15 +19,19 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
         <h3 className="group-hover:underline">{title}</h3>
         <ChevronDown
           size={18}
-          className={`${
-            isOpen ? "rotate-180" : "rotate-0"
-          } transition-transform duration-300`}
+          className={clsx(
+            { "rotate-180": isOpen },
+            { "rotate-0": !isOpen },
+            "transition-transform duration-300",
+          )}
         />
       </button>
       <div
-        className={`${
-          isOpen ? "max-h-56 pb-4" : "max-h-0"
-        } w-full overflow-y-hidden text-secondary-300 transition-all duration-300`}
+        className={clsx(
+          { "max-h-56 pb-4": isOpen },
+          { "max-h-0": !isOpen },
+          "w-full overflow-y-hidden text-secondary-300 transition-all duration-300",
+        )}
       >
         {children}
       </div>
