@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useState } from "react";
-import Button from "./button";
+import Button from "../button";
 import Dialog from "./dialog";
 
 export default {
