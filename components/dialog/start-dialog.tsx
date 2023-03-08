@@ -35,6 +35,7 @@ export default function StartDialog({ isOpen, close }: StartDialogProps) {
         <Input
           ref={nameRef}
           id="player-name"
+          className="w-full"
           placeholder="Your name"
           aria-label="Your name"
         />
