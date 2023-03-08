@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { useRef, useState } from "react";
 import PageHeader from "@/components/page-header";
-import Board from "@/components/board";
+import Board from "@/components/game/board";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import AccordionItem from "@/components/ui/accordion-item";
 import Dialog from "@/components/ui/dialog";
-import Input from "@/components/ui/input";
+import Input from "@/components/ui/input/input";
 
 export default function Home() {
   const [isGameDialogOpen, setIsGameDialogOpen] = useState(false);
