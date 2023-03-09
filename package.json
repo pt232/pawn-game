@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "lint": "next lint",
-    "test": "cypress run",
+    "test": "npm run test:storybook && cypress run",
     "test:e2e": "cypress open",
     "test:storybook": "test-storybook",
     "dev": "next dev",
