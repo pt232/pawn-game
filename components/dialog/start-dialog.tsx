@@ -4,11 +4,12 @@ import Dialog from "../ui/dialog";
 import Input from "../ui/input/input";
 
 type StartDialogProps = {
+  id: string;
   isOpen: boolean;
   close: () => void;
 };
 
-export default function StartDialog({ isOpen, close }: StartDialogProps) {
+export default function StartDialog({ id, isOpen, close }: StartDialogProps) {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -26,7 +27,12 @@ export default function StartDialog({ isOpen, close }: StartDialogProps) {
   }
 
   return (
-    <Dialog isOpen={isOpen} title="Let's play the Pawn Game" close={close}>
+    <Dialog
+      id={id}
+      isOpen={isOpen}
+      title="Let's play the Pawn Game"
+      close={close}
+    >
       <p className="mb-4">
         To get started, enter your player name. Once the game is created, others
         can join via a link.

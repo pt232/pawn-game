@@ -17,6 +17,9 @@ export default function PageHeader() {
           <li>
             <button
               className="transition-colors hover:text-white"
+              aria-haspopup="dialog"
+              aria-expanded={isAboutDialogOpen}
+              aria-controls="about-dialog"
               onClick={() => setIsAboutDialogOpen(true)}
             >
               About
@@ -36,6 +39,7 @@ export default function PageHeader() {
       </nav>
 
       <AboutDialog
+        id="about-dialog"
         isOpen={isAboutDialogOpen}
         close={() => setIsAboutDialogOpen(false)}
       />

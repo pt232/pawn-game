@@ -9,16 +9,16 @@ type AccordionItemProps = {
 
 export default function AccordionItem({ children, title }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const itemHeadId = useId();
-  const itemBodyId = useId();
+  const titleId = useId();
+  const bodyId = useId();
 
   return (
     <div className="border-b border-b-secondary-400">
       <button
-        id={itemHeadId}
+        id={titleId}
         className="group flex w-full items-center justify-between gap-x-4 py-4"
-        aria-expanded={isOpen ? "true" : "false"}
-        aria-controls={itemBodyId}
+        aria-expanded={isOpen}
+        aria-controls={bodyId}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <h3 className="group-hover:underline">{title}</h3>
@@ -33,13 +33,13 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
       </button>
       <div
         role="region"
-        id={itemBodyId}
+        id={bodyId}
         className={clsx(
           { "max-h-56 pb-4": isOpen },
           { "max-h-0": !isOpen },
           "w-full overflow-y-hidden text-secondary-300 transition-all duration-300",
         )}
-        aria-labelledby={itemHeadId}
+        aria-labelledby={titleId}
       >
         {children}
       </div>

@@ -2,13 +2,14 @@ import Link from "next/link";
 import Dialog from "../ui/dialog";
 
 type AboutDialogProps = {
+  id: string;
   isOpen: boolean;
   close: () => void;
 };
 
-export default function AboutDialog({ isOpen, close }: AboutDialogProps) {
+export default function AboutDialog({ id, isOpen, close }: AboutDialogProps) {
   return (
-    <Dialog isOpen={isOpen} title="About" close={close}>
+    <Dialog id={id} isOpen={isOpen} title="About" close={close}>
       <p className="mb-3">
         The Pawn Game is a simple and fun multiplayer web app that I created as
         a personal project to practice my web development skills. Enjoy playing!

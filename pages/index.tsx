@@ -33,12 +33,16 @@ export default function Home() {
 
           <Button
             className="mt-4 w-full"
+            aria-haspopup="dialog"
+            aria-expanded={isGameDialogOpen}
+            aria-controls="start-dialog"
             onClick={() => setIsGameDialogOpen(true)}
           >
             New Game
           </Button>
 
           <StartDialog
+            id="start-dialog"
             isOpen={isGameDialogOpen}
             close={() => setIsGameDialogOpen(false)}
           />
