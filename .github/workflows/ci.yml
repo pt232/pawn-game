@@ -29,14 +29,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
       - name: Build
         run: npm run build
 
-      - name: Start the server
-        run: npm start &
+      - name: Build Storybook
+        run: npm run build:storybook -- --quite
 
-      - name: Wait for the server to start
-        run: sleep 5
-
-      - name: Test
-        run: npm run test
+      - name: Serve and run tests
+        run: |
+          npx concurrently -k -n "SB,NEXT,TEST" -c "magenta,cyan,yellow" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npm start" \
+            "npx wait-on tcp:3000 tcp:6006 && npm run test" \
