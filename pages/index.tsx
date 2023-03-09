@@ -47,7 +47,7 @@ export default function Home() {
             close={() => setIsGameDialogOpen(false)}
           />
 
-          <section className="mt-8 mb-4">
+          <section className="mt-8 mb-4" data-testid="faq-section">
             <Card>
               <h2 className="mb-2 font-primary text-xl font-bold">
                 How to Play

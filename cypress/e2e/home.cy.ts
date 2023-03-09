@@ -11,12 +11,14 @@ describe("home page", () => {
   it("toggles the accordion items", () => {
     cy.scrollTo("bottom");
 
-    cy.get("[aria-expanded]").each(($accordionItem) => {
-      cy.wrap($accordionItem).click();
-      cy.get("[aria-labelledby]").should("be.visible");
-      cy.wrap($accordionItem).click();
-      cy.get("[aria-labelledby]").should("not.be.visible");
-    });
+    cy.getByData("faq-section")
+      .find("[aria-expanded]")
+      .each(($accordionItem) => {
+        cy.wrap($accordionItem).click();
+        cy.get("[aria-labelledby]").should("be.visible");
+        cy.wrap($accordionItem).click();
+        cy.get("[aria-labelledby]").should("not.be.visible");
+      });
   });
 });
 
