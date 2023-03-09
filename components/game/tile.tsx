@@ -38,6 +38,8 @@ export default function Tile({
         <span
           className={clsx(
             "absolute top-[2px] left-[4px] select-none text-xs font-medium sm:top-1 sm:left-2 sm:text-base md:font-bold",
+            { "text-board-black": color === "white" },
+            { "text-board-white": color === "black" },
           )}
         >
           {number}
