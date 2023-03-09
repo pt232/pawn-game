@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
     "prepare": "husky install",
     "format": "prettier --write .",
     "lint": "next lint",
     "test": "cypress run",
     "test:e2e": "cypress open",
+    "test:storybook": "test-storybook",
     "dev": "next dev",
     "build": "next build",
+    "build:storybook": "build-storybook",
     "start": "next start"
   },
   "dependencies": {
@@ -37,8 +38,10 @@
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
+    "@storybook/test-runner": "^0.9.4",
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
