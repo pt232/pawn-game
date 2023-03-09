@@ -36,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: Build Storybook
-        run: npm run build:storybook -- --quite
+        run: npm run build:storybook -- --quiet
 
       - name: Serve and run tests
         run: |
