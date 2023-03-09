@@ -32,6 +32,7 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
         />
       </button>
       <div
+        role="region"
         id={itemBodyId}
         className={clsx(
           { "max-h-56 pb-4": isOpen },
