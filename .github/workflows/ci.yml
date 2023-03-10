@@ -29,14 +29,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Build Next
         run: npm run build
 
-      - name: Start the server
+      - name: Build Storybook
+        run: npm run build:storybook -- --quiet
+
+      - name: Serve Storybook
+        run: npx serve storybook-static -p 6006 &
+
+      - name: Start Next server
         run: npm start &
 
-      - name: Wait for the server to start
-        run: sleep 5
+      - name: Wait for the servers to start
+        run: sleep 10
 
-      - name: Test
+      - name: Run tests
         run: npm run test
