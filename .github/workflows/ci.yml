@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18.13.0
+          node-version: 16
 
       - name: Install dependencies
         run: npm ci
@@ -32,20 +32,19 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
 
-      - name: Build Next
+      - name: Build
         run: npm run build
 
-      - name: Build Storybook
-        run: npm run build:storybook -- --quiet
-
       - name: Serve Storybook
+        working-directory: apps/web
         run: npx serve storybook-static -p 6006 &
 
       - name: Start Next server
+        working-directory: apps/web
         run: npm start &
 
       - name: Wait for the servers to start
         run: sleep 10
 
-      - name: Run tests
+      - name: Test
         run: npm run test

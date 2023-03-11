@@ -22,10 +22,10 @@ export default function Home() {
         <PageHeader />
 
         <main>
-          <h1 className="text-center font-primary text-xl font-bold sm:text-2xl">
+          <h1 className="font-primary text-center text-xl font-bold sm:text-2xl">
             Welcome to the Pawn Game!
           </h1>
-          <p className="mb-4 text-center text-secondary-300 sm:mb-6 sm:text-lg">
+          <p className="text-secondary-300 mb-4 text-center sm:mb-6 sm:text-lg">
             A pawns-only chess variant
           </p>
 
@@ -49,7 +49,7 @@ export default function Home() {
 
           <section className="mt-8 mb-4" data-testid="faq-section">
             <Card>
-              <h2 className="mb-2 font-primary text-xl font-bold">
+              <h2 className="font-primary mb-2 text-xl font-bold">
                 How to Play
               </h2>
               <p className="text-secondary-300">
@@ -59,7 +59,7 @@ export default function Home() {
                 voluptates quas voluptas? Autem doloribus praesentium ea.
               </p>
 
-              <h3 className="mt-4 font-bold text-secondary-300">
+              <h3 className="text-secondary-300 mt-4 font-bold">
                 Some heading
               </h3>
               <p className="text-secondary-300">
@@ -72,7 +72,7 @@ export default function Home() {
                 impedit a!
               </p>
 
-              <h3 className="mt-4 font-bold text-secondary-300">
+              <h3 className="text-secondary-300 mt-4 font-bold">
                 Another heading
               </h3>
               <p className="text-secondary-300">
@@ -82,7 +82,7 @@ export default function Home() {
                 voluptates quas voluptas? Autem doloribus praesentium ea.
               </p>
 
-              <h2 className="mt-4 font-primary text-xl font-bold">
+              <h2 className="font-primary mt-4 text-xl font-bold">
                 Frequently asked questions
               </h2>
               <AccordionItem title="Lorem ipsum dolor?">

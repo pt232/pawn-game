@@ -13,7 +13,7 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
   const bodyId = useId();
 
   return (
-    <div className="border-b border-b-secondary-400">
+    <div className="border-b-secondary-400 border-b">
       <button
         id={titleId}
         className="group flex w-full items-center justify-between gap-x-4 py-4"
@@ -37,7 +37,7 @@ export default function AccordionItem({ children, title }: AccordionItemProps) {
         className={clsx(
           { "max-h-56 pb-4": isOpen },
           { "max-h-0": !isOpen },
-          "w-full overflow-y-hidden text-secondary-300 transition-all duration-300",
+          "text-secondary-300 w-full overflow-y-hidden transition-all duration-300",
         )}
         aria-labelledby={titleId}
       >

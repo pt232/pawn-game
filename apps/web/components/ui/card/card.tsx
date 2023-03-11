@@ -3,5 +3,5 @@ type CardProps = {
 };
 
 export default function Card({ children }: CardProps) {
-  return <div className="rounded-md bg-secondary-900 p-4">{children}</div>;
+  return <div className="bg-secondary-900 rounded-md p-4">{children}</div>;
 }

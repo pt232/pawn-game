@@ -30,7 +30,7 @@ export default function Dialog({
       <dialog
         id={id}
         open={isOpen}
-        className="fixed top-32 z-20 w-10/12 max-w-md rounded-md bg-secondary-900 p-4 text-white shadow-md"
+        className="bg-secondary-900 fixed top-32 z-20 w-10/12 max-w-md rounded-md p-4 text-white shadow-md"
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={bodyId}

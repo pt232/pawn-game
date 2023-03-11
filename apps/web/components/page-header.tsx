@@ -8,7 +8,7 @@ export default function PageHeader() {
   const [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
-    <header className="mb-4 flex items-center justify-between rounded-md py-4 text-secondary-300">
+    <header className="text-secondary-300 mb-4 flex items-center justify-between rounded-md py-4">
       <Link href="/">
         <Image src="/logo.svg" width={128} height={24} alt="Logo" />
       </Link>

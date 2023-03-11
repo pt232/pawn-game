@@ -11,7 +11,7 @@ function Input(
     <input
       ref={ref}
       className={clsx(
-        "rounded-md bg-secondary-700 py-2 px-3 text-white placeholder:text-secondary-300",
+        "bg-secondary-700 placeholder:text-secondary-300 rounded-md py-2 px-3 text-white",
         className,
       )}
       {...props}
