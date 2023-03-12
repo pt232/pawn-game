@@ -5,6 +5,10 @@
   "workspaces": [
     "apps/*"
   ],
+  "engines": {
+    "node": "16.x",
+    "yarn": "please-use-npm"
+  },
   "scripts": {
     "prepare": "husky install",
     "format": "prettier --write .",
