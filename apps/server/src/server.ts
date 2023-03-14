@@ -2,6 +2,7 @@ import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import config from "./config";
+import logger from "./config/logger";
 
 const app = express();
 const server = http.createServer(app);
@@ -13,7 +14,7 @@ const io = new Server(server, {
 });
 
 io.on("connection", () => {
-  console.log("A user connected");
+  logger.info("a user connected");
 });
 
 app.get("/", (req, res) => {
@@ -21,5 +22,5 @@ app.get("/", (req, res) => {
 });
 
 server.listen(config.port, () => {
-  console.log(`Server is running at http://localhost:${config.port}`);
+  logger.info(`started server on http://localhost:${config.port}`);
 });
